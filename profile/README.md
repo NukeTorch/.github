@@ -2,17 +2,17 @@
 
 NukeTorch is an AI engine for Apple silicon: training and inference of large models on Macs, from one Mac to several joined by Thunderbolt.
 
-## NukeTorch N1.0.0: free, for one Mac
+## NukeTorch N1.0.1: free, for one Mac
 
 A fast inference server with an OpenAI-compatible API. Download it and repeat our numbers with the benchmark built into the program.
 
 ```sh
-curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/n1.0.0/install.sh | sh
+curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/n1.0.1/install.sh | sh
 ```
 
 | Model | One MacBook Pro M5 Max, 48 GB |
 |---|---:|
-| Qwen3.5-9B LoRA fine-tuning, 1,000 steps of the recipe Apple showed in WWDC26 session 233 | **1,239** trained tokens/s |
+| Qwen3.5-9B LoRA fine-tuning, 1,000 steps of the recipe Apple showed in WWDC26 session 233 | **1,242** trained tokens/s |
 | Qwen3.6 35B-A3B 4-bit, with its DFlash2 draft model | **510.3** tokens/s (16 coding prompts, NVIDIA SPEED-Bench) |
 | Qwen3.8 27B 4-bit, with its DFlash2 draft model | **209.9** tokens/s (16 coding prompts, NVIDIA SPEED-Bench) |
 | NVIDIA GR00T N1.7 robot policy, 16 clients at once | **37.2** chunks/s (**44.8** ms for one request) |
