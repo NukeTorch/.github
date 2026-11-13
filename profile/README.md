@@ -2,12 +2,12 @@
 
 NukeTorch is an AI engine for Apple silicon: training and inference of large models on Macs, from one Mac to several joined by Thunderbolt.
 
-## NukeTorch N1.0.1: free, for one Mac
+## NukeTorch N1.0.2: free, for one Mac
 
 A fast inference server with an OpenAI-compatible API. Download it and repeat our numbers with the benchmark built into the program.
 
 ```sh
-curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/n1.0.1/install.sh | sh
+curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/n1.0.2/install.sh | sh
 ```
 
 | Model | One MacBook Pro M5 Max, 48 GB |
@@ -20,7 +20,7 @@ curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/n1.0.1/insta
 
 How we measured, what to expect and how to repeat it: https://github.com/NukeTorch/nuketorch · Models: https://huggingface.co/NukeTorch
 
-Free for individuals, schools and non-profits, non-commercial open-source projects, and businesses under US$10 million in revenue and 250 people.
+Free for personal use, schools and non-profits, non-commercial open-source projects, and businesses that with their affiliates are under US$10 million in revenue and 250 people; terms per version in its LICENSE.md.
 
 ## Pipeline parallelism: NukeTorch Relay, several Macs
 
