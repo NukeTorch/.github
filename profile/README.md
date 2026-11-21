@@ -33,8 +33,9 @@ Our pipeline parallelism spreads one model across many machines connected by a s
 |---|---:|---|
 | **Training:** Qwen3.5 9B fine-tuning, Apple WWDC26 recipe, four MacBook Pro M5 Max 48 GB | **5,358.5** tokens/s | over 8× Apple's WWDC26 figure of about 600 tokens/s (four M3 Ultra Mac Studios) |
 | **Training:** Qwen3.5 9B fine-tuning, Apple WWDC26 recipe, one MacBook Pro M5 Max 48 GB | **1,440.8** tokens/s | 8× Apple's one-Mac figure of about 180 tokens/s (one M3 Ultra) |
-| **Robotics:** GR00T N1.7, four M5 Max, 192 concurrent policies | **152.07** chunks/s | 2.45× the fastest published H100 result (62.2 chunks/s)¹ |
+| **Robotics:** Nubotics 1.7B, one MacBook Pro M5 Max, one robot at a time | **53.2** chunks/s (18.81 ms per call) | 1.22× NVIDIA's own H100 figure for GR00T N1.7 on LIBERO-10 (43.7 chunks/s, 22.9 ms, one request at a time) |
 | **Robotics:** GR00T N1.7, one MacBook Pro M5 Max, one request at a time | **22.6** chunks/s (44.34 ms per call) | 0.63× NVIDIA's own H100 figure (35.9 chunks/s)² |
+| **Robotics:** GR00T N1.7, four M5 Max, 192 concurrent policies | **152.07** chunks/s | 2.45× the fastest published H100 result (62.2 chunks/s), which is for one request at a time¹ |
 | **Inference:** a larger model pipelined over four MacBook Pro M5 Max, one user | **177.7** tokens/s | 1.18× the published one-H100 NVL result, ~4-bit Unsloth GGUF (151 tokens/s)³ |
 | **Inference:** a larger model pipelined over four MacBook Pro M5 Max, 32 users | **859.0** tokens/s combined | No published H100 result for 32 users at once found. |
 
