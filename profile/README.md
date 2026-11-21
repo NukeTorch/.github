@@ -2,24 +2,26 @@
 
 NukeTorch is an AI engine for Apple silicon: training and inference of large models on Macs, from one Mac to several joined by Thunderbolt.
 
-## NukeTorch 1.0.4: free, on up to 250 machines, each working alone
+## NukeTorch 1.0.5: free, on up to 250 machines, each working alone
 
 A fast inference server with an OpenAI-compatible API. Download it and repeat our numbers with the benchmark built into the program.
 
 ```sh
-curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/n1.0.4/install.sh | sh
+curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/1.0.5/install.sh | sh
 ```
 
 | Model | One MacBook Pro M5 Max, 48 GB |
 |---|---:|
 | Qwen3.5-9B LoRA fine-tuning, 1,000 steps of the recipe Apple showed in WWDC26 session 233 | **1,242** trained tokens/s |
-| Qwen3.6 35B-A3B 4-bit, with its DFlash2 draft model | **510.3** tokens/s (16 coding prompts, NVIDIA SPEED-Bench) |
+| Qwen3.6 35B-A3B 4-bit, with its DFlash2 draft model | **511.1** tokens/s (16 coding prompts, NVIDIA SPEED-Bench) |
+| Qwen3.8 27B 4-bit, with its DFlash2 draft model | **205.0** tokens/s (16 coding prompts, NVIDIA SPEED-Bench) |
 | NVIDIA GR00T N1.7 robot policy, 16 clients at once | **37.2** chunks/s (**44.8** ms for one request) |
+| Nubotics robot policy (built on NVIDIA's GR00T N1.7 weights), one robot | **53.2** chunks/s (**18.81** ms a call; NVIDIA's H100 figure: 22.9 ms) |
 | Whisper large-v3-turbo, speech to text | **2.97%** word error rate on LibriSpeech at **89** × real time |
 
 How we measured, what to expect and how to repeat it: https://github.com/NukeTorch/nuketorch · Models: https://huggingface.co/NukeTorch
 
-Free for personal use, schools and universities, and businesses and other organizations (not government entities or international organizations) that with their affiliates have less than US$10 million in revenue and fewer than 250 people, on up to 250 machines, each working alone; everyone else may evaluate it for 30 days, then needs a commercial license (contact@nuketorch.ai); terms per version in its LICENSE.md: https://github.com/NukeTorch/nuketorch/blob/n1.0.4/LICENSE.md
+Free for personal use, schools and universities, and businesses and other organizations (not government entities or international organizations) that with their affiliates have less than US$10 million in revenue and fewer than 250 people, on up to 250 machines, each working alone; everyone else may evaluate it for 30 days, then needs a commercial license (contact@nuketorch.ai); terms per version in its LICENSE.md: https://github.com/NukeTorch/nuketorch/blob/1.0.5/LICENSE.md
 
 ## Pipeline parallelism: NukeTorch Enterprise, Multi Machines
 
