@@ -13,7 +13,7 @@ curl -fsSL https://github.com/NukeTorch/nuketorch/releases/download/1.0.5/instal
 | Model | One MacBook Pro M5 Max, 48 GB |
 |---|---:|
 | Qwen3.5-9B LoRA fine-tuning, 1,000 steps of the recipe Apple showed in WWDC26 session 233 | **1,242** trained tokens/s |
-| Qwen3.6 35B-A3B 4-bit, with its DFlash2 draft model | **511.1** tokens/s (16 coding prompts, NVIDIA SPEED-Bench) |
+| Qwen3.6 35B-A3B 4-bit, with its DFlash2 draft model | **517.5** tokens/s (prompt A, 5 coding prompts, benchmark report) |
 | Qwen3.8 27B 4-bit, with its DFlash2 draft model | **200.3** tokens/s (prompt A, 5 coding prompts, benchmark report) |
 | NVIDIA GR00T N1.7 robot policy, 16 clients at once | **37.2** chunks/s (**44.8** ms for one request) |
 | Nubotics robot policy (built on NVIDIA's GR00T N1.7 weights), one robot | **53.2** chunks/s (**18.81** ms a call; NVIDIA's H100 figure: 22.9 ms) |
